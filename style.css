@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+ --cyan: hsl(180, 66%, 49%);
+ --violet: hsl(257, 27%, 26%);
+ --red: hsl(0, 87%, 67%);
+ --gray: hsl(0, 0%, 75%);
+ --gray-violet: hsl(257, 7%, 63%);
+ --dark-blue: hsl(255, 11%, 22%);
+ --dark-violet: hsl(260, 8%, 14%);
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
+}
+html {
+ overflow-x: hidden;
+}
+img {
+ user-select: none;
+}
+body {
+ padding: 2em;
+ overflow-x: hidden;
+}
+
+#burger-logo {
+ width: 32px;
+}
+header {
+ position: relative;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 1em;
+}
+nav {
+ position: absolute;
+ top: 150%;
+ right: -200%;
+ padding: 2em;
+ background-color: var(--violet);
+ width: calc(100vw - 4em);
+ height: 50vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ border-radius: 10px;
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.5s ease-in-out;
+}
+nav.open {
+ right: 0;
+ opacity: 1;
+ pointer-events: auto;
+}
+nav a {
+ display: block;
+ text-align: center;
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
+}
+nav button {
+ width: 100%;
+}
+#bar {
+ height: 1px;
+ background-color: hsl(258deg 27% 38%);
+}
+
+button {
+ background-color: var(--cyan);
+ color: white;
+ border-radius: 100px;
+ border: none;
+ outline: none;
+ padding: 0.5em;
+ font-size: 1em;
+ font-weight: bold;
+}
+
+main img {
+ width: 125vw;
+}
+h1 {
+ font-size: 2.5em;
+ text-align: center;
+ font-weight: 700;
+ line-height: 1em;
+}
+h2 {
+ margin-top: 1em;
+ margin-bottom: 1em;
+ color: var(--gray);
+ text-align: center;
+ font-size: 1.1em;
+ font-weight: 500;
+}
+#go-btn {
+ width: 50vw;
+ font-size: 1.1em;
+ padding: 0.8em;
+ text-align: center;
+ display: block;
+ margin: 0px auto;
+}
+form {
+ background-color: var(--violet);
+ padding: 1.5em;
+ border-radius: 10px;
+ margin: 5em 0;
+}
+input[type="text"] {
+ font-size: 1.1em;
+ padding: 0.5em;
+ width: 100%;
+ border-radius: 5px;
+ border: none;
+ outline: none;
+ margin-bottom: 1em;
+}
+input[type="submit"] {
+ background-color: var(--cyan);
+ color: white;
+ width: 100%;
+ padding: 0.5em 0em;
+ font-size: 1.1em;
+ border: none;
+ outline: none;
+ border-radius: 5px;
+}
+
+@media only screen and (min-width: 1224px) {
+ /* Styles for laptops and desktops */
+ #burger-logo {
+  display: none;
+ }
+ nav {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ nav a {
+  color: var(--gray);
+  display: unset;
+  margin-left: 3em;
+ }
+ nav button {
+  margin-left: 3em;
+  width: 10vw;
+ }
+ #bar {
+  display: none;
+ }
+ main img {
+  width: unset;
+ }
+}
